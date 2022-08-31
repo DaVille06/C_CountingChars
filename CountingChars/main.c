@@ -12,10 +12,10 @@ int main()
 
 int stringLength(const char* stringPtr)
 {
-	const char* start = stringPtr;
-	const char* end = NULL;
-	while (*stringPtr)
-		end = stringPtr++;
+	const char* endPtr = stringPtr;
 
-	return (end - start) + 1;
+	while (*endPtr)
+		endPtr++;
+
+	return endPtr - stringPtr;
 }
